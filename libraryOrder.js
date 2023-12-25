@@ -103,7 +103,7 @@ function updateCartCounter() {
             main.innerHTML += `
                 <div class="empty-basket-message">Корзина пуста!</div>
                 <div class="empty-basket-submessage">Перейдите в интернет-магазин и добавьте в корзину интересующий Вас продукт.</div>
-                <a href="http://siteinternetcapability.000.pe/" class="store-button">Интернет-магазин</a>
+                <a href="http://siteinternetcapability.000.pe/?subCategoryId=6" class="store-button">Интернет-магазин</a>
             `;
         } else {
             let productCountText = totalQuantity === 1 ? 'товар' : totalQuantity < 5 ? 'товара' : 'товаров';
@@ -128,7 +128,7 @@ function updateCartCounter() {
                     </div>
                     <span class="select-all no-select">Вкл/откл все</span>
                     <div class="custom-delete">
-                        <img src="delete.ico" style="width: 24px; height: 24px"></img>
+                        <img src="delete.ico"></img>
                         <span class="delete-all no-select">Удалить выбранные</span>
                     </div>
                 </div>
@@ -222,7 +222,6 @@ function refreshUI() {
 function displayOrderConfirmation() {
     let messageContainer = document.createElement('div');
     messageContainer.id = 'order-confirmation';
-    messageContainer.style = 'position: fixed; bottom: 20px; right: 20px; width: 300px; height: 100px; background-color: green; color: white; display: flex; align-items: center; justify-content: center; font-size: 1em; z-index: 10000;';
 
     messageContainer.innerHTML = 'Ваш заказ оформлен!';
 
